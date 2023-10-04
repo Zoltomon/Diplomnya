@@ -36,5 +36,17 @@ namespace PorjectStudentWPF.Pages
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void BtnReg_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                NavigateClass.navigate.Navigate(new RegPage());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }

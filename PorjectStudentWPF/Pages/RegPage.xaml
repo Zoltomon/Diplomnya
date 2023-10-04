@@ -5,42 +5,42 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:PorjectStudentWPF.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="600" d:DesignWidth="800"
       Title="RegPage">
 
     <Grid Background="#0272BA">
-        <StackPanel HorizontalAlignment="Center" Width="250" VerticalAlignment="Center">
+        <DockPanel HorizontalAlignment="Center" Width="350" VerticalAlignment="Center">
             <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="80"/>
-                    <RowDefinition Height="37"/>
-                    <RowDefinition Height="250"/>
+                    <RowDefinition Height="90"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="335"/>
                 </Grid.RowDefinitions>
                 <StackPanel Grid.Row="0" Orientation="Vertical">
-                    <Image Source="../Resource/Images/IconLogo.png" Width="40" Height="40"/>
-                    <TextBlock Text="Рабочее место кассира" FontSize="12" HorizontalAlignment="Center" Foreground="#B0B0B0"/>
+                    <Image Source="../Resource/Images/IconLogo.png" Width="60" Height="60"/>
+                    <TextBlock Text="Рабочее место кассира" FontSize="16" HorizontalAlignment="Center" FontFamily="Roboto Condensed" Foreground="#B0B0B0"/>
                 </StackPanel>
                 <Border Grid.Row="1" CornerRadius="5,5,0,0" BorderBrush="#0281C8" BorderThickness="2">
                     <StackPanel Grid.Row="1" SnapsToDevicePixels="True" Orientation="Horizontal" Background="#0281C8">
-                        <Image Source="../Resource/Images/IconUserAutoReg.png" Width="20" Height="20" Margin="25,0,0,0"/>
-                        <TextBlock Text="Регистрация" VerticalAlignment="Center" Margin="3,0,0,0" FontSize="16"/>
+                        <Image Source="../Resource/Images/IconUserAuto.png" Width="30" Height="30" Margin="25,0,0,0"/>
+                        <TextBlock Text="Регистрация" VerticalAlignment="Center" FontWeight="SemiBold" Margin="3,0,0,0" FontFamily="Roboto Condensed" FontSize="20"/>
                     </StackPanel>
                 </Border>
                 <Border Grid.Row="2" CornerRadius="0,0,5,5" BorderBrush="#F5F5F5" BorderThickness="2">
                     <StackPanel Grid.Row="2" SnapsToDevicePixels="True" Orientation="Vertical" Background="#F5F5F5">
-                        <TextBlock Text="Введите почту:" Margin="25,2,25,0" FontSize="10"/>
-                        <TextBox BorderThickness="0" Height="25" Margin="25,0,25,0" Style="{StaticResource RoundedTextBox}"/>
-                        <TextBlock Text="Введите логин:" Margin="25,2,25,0" FontSize="10"/>
-                        <TextBox BorderThickness="0" Height="25" Margin="25,0,25,0" Style="{StaticResource RoundedTextBox}"/>
-                        <TextBlock Text="Введите пароль:" Margin="25,2,25,0" FontSize="10"/>
-                        <TextBox BorderThickness="0" Height="25" Margin="25,0,25,0" Style="{StaticResource RoundedTextBox}"/>
-                        <TextBlock Text="Повторите пароль:" Margin="25,2,25,0" FontSize="10"/>
-                        <TextBox BorderThickness="0" Height="25" Margin="25,0,25,0" Style="{StaticResource RoundedTextBox}"/>
-                        <Button Content="Войти" Height="25" Margin="25,14,25,0" Style="{StaticResource RndBtnStl}"/>
-                        <Button Content="Регистрация" Height="25" Margin="25,14,25,14" Style="{StaticResource RndBtnStl}"/>
+                        <TextBlock Text="Введите email:" Margin="25,2,25,0" FontSize="16" FontFamily="Roboto Condensed"/>
+                        <TextBox BorderThickness="0" Height="30" FontSize="16" Margin="25,0,25,0" Style="{StaticResource RoundedTextBox}"/>
+                        <TextBlock Text="Введите логин:" Margin="25,2,25,0" FontSize="16" FontFamily="Roboto Condensed"/>
+                        <TextBox BorderThickness="0" Height="30" FontSize="16" Margin="25,0,25,0" Style="{StaticResource RoundedTextBox}"/>
+                        <TextBlock Text="Введите пароль:" Margin="25,0,25,0" FontSize="16" FontFamily="Roboto Condensed"/>
+                        <TextBox BorderThickness="0" Height="30" FontSize="16" Margin="25,0,25,0" Style="{StaticResource RoundedTextBox}"/>
+                        <TextBlock Text="Повторите пароль:" Margin="25,2,25,0" FontSize="16" FontFamily="Roboto Condensed"/>
+                        <TextBox BorderThickness="0" Height="30" FontSize="16" Margin="25,0,25,0" Style="{StaticResource RoundedTextBox}"/>
+                        <Button Content="Регистрация" Background="#0281C8" Name="BtnReg" Click="BtnReg_Click" Height="40" Margin="25,15,25,0" Style="{StaticResource RndBtnStl}" FontSize="20" FontFamily="Roboto Condensed"/>
+                        <Button Content="Назад" Height="40" Margin="25,15,25,15" Style="{StaticResource RndBtnStl}" Name="BtnBack" Click="BtnBack_Click" FontSize="20" FontFamily="Roboto Condensed"/>
                     </StackPanel>
                 </Border>
             </Grid>
-        </StackPanel>
+        </DockPanel>
     </Grid>
 </Page>

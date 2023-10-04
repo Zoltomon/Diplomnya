@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PorjectStudentWPF.Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,24 @@ namespace PorjectStudentWPF.Pages
         public RegPage()
         {
             InitializeComponent();
+        }
+
+        private void BtnReg_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BtnBack_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                NavigateClass.navigate.GoBack();
+            }
+            catch(Exception ex) 
+            {
+                MessageBox.Show(ex.Message);
+            }
+
         }
     }
 }

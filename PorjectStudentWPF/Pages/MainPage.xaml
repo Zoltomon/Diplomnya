@@ -17,10 +17,8 @@
             <ColumnDefinition Width="153"/>
             <ColumnDefinition Width="647*"/>
         </Grid.ColumnDefinitions>
-        <StackPanel Background="#0281C8" Grid.Row="0" Grid.Column="0">
-            <Image Source="../Resource/Images/IconLogo.png" Width="50" Height="50" Margin="0,10,0,10"/>
-        </StackPanel>
-        <StackPanel Grid.Row="0" Grid.Column="1" Background="#0272BA">
+        <StackPanel Background="#0272BA" Grid.ColumnSpan="2" Grid.Row="0" Grid.Column="0">
+            <Image HorizontalAlignment="Left" Source="../Resource/Images/IconLogo.png" Width="50" Height="50" Margin="40,10,0,10"/>
         </StackPanel>
         <StackPanel Grid.Row="1" Grid.Column="0" Background="#F5F5F5">
             <Button FontFamily="Roboto Condensed" Content="Открыть кассу" FontSize="16" Style="{StaticResource RndBtnStlBxOffice}" Height="30" Margin="10,15,10,0" Foreground="White"/>
