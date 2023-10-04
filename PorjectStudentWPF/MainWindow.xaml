@@ -20,6 +20,9 @@
                 <Button Width="20" Margin="0,0,2,0" Background="Transparent" Name="BtnDashWndw" Click="BtnDashWndw_Click" BorderThickness="0" Height="20" HorizontalAlignment="Right" VerticalAlignment="Center">
                     <Image Source="/Resource/Images/IconDash.png"/>
                 </Button>
+                <Button Width="20" Margin="0,0,2,0" Background="Transparent" Name="BtnMaxWndw" Click="BtnMaxWndw_Click" Height="20" BorderThickness="0" VerticalAlignment="Center" HorizontalAlignment="Right">
+                    <Image Source="/Resource/Images/IconMaxWndw.png"/>
+                </Button>
                 <Button Width="20" Margin="0,0,2,0" Background="Transparent" Name="BtnExtWndw" Click="BtnExtWndw_Click" BorderThickness="0" Height="20" HorizontalAlignment="Right" VerticalAlignment="Center">
                     <Image Source="/Resource/Images/IconExit.png"/>
                 </Button>

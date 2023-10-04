@@ -44,7 +44,30 @@ namespace PorjectStudentWPF
 
         private void BtnDashWndw_Click(object sender, RoutedEventArgs e)
         {
-            this.WindowState = WindowState.Minimized;
+            if(this.WindowState == WindowState.Maximized) 
+            {
+                this.WindowState = WindowState.Normal;
+            }
+            if(this.WindowState == WindowState.Normal)
+            {
+                this.WindowState = WindowState.Minimized;
+            }
+            else
+            {
+                this.WindowState = WindowState.Normal;
+            }
+        }
+
+        private void BtnMaxWndw_Click(object sender, RoutedEventArgs e)
+        {
+            if (this.WindowState == WindowState.Normal)
+            {
+                this.WindowState = WindowState.Maximized;
+            }
+            else
+            {
+                this.WindowState = WindowState.Normal;
+            }
         }
     }
 }

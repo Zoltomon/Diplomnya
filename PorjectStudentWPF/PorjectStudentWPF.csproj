@@ -18,7 +18,9 @@
     <None Remove="Resource\Images\IconExit.png" />
     <None Remove="Resource\Images\IconFolder.png" />
     <None Remove="Resource\Images\IconLogo.png" />
+    <None Remove="Resource\Images\IconMaxWndw.png" />
     <None Remove="Resource\Images\IconPlus.png" />
+    <None Remove="Resource\Images\IconSearch.png" />
     <None Remove="Resource\Images\IconUserAuto.png" />
   </ItemGroup>
 
@@ -66,7 +68,13 @@
     <Resource Include="Resource\Images\IconLogo.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Resource\Images\IconMaxWndw.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Resource\Images\IconPlus.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resource\Images\IconSearch.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Resource\Images\IconUserAuto.png">
