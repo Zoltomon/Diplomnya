@@ -13,7 +13,11 @@
             <ColumnDefinition Width="176"/>
             <ColumnDefinition Width="441*"/>
         </Grid.ColumnDefinitions>
-        <StackPanel Grid.Column="0" Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Column="0" Grid.Row="0" Background="White">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="20"/>
@@ -21,18 +25,26 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
                 <StackPanel Grid.Row="0" Orientation="Horizontal">
-                    <Image Source="../Resource/Images/IconSearch.png" Height="12" Width="12"/>
-                    <TextBox Style="{StaticResource SearchTextBox}" Text="Поиск" Width="160" BorderThickness="0,0,0,0" BorderBrush="#E4E4E4" Padding="0,0,0,0"/>
+                    <TextBox Style="{StaticResource SearchTextBox}" FontSize="14" Text="Поиск" Width="146" Margin="2,0,2,0" BorderThickness="0,0,0,0" BorderBrush="#E4E4E4" Padding="0,0,0,0"/>
+                    <Image Source="../Resource/Images/IconSearch.png" Height="20" Width="20" Margin="0,0,5,0"/>
                 </StackPanel>
                 <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Stretch">
-                    <Image Source="../Resource/Images/IconPlus.png" Width="12" Margin="2" Height="12"/>
-                    <Button Content="Добавить товар" Style="{StaticResource RndBtnStlMain}"/>
-                    <Image Source="../Resource/Images/IconFolder.png" Width="12" Height="12" Margin="58,0,0,0"/>
+                    <Image Source="../Resource/Images/IconPlus.png" Width="20" Margin="2" Height="20"/>
+                    <Button FontSize="14" Content="Добавить товар" Style="{StaticResource RndBtnStlMain}"/>
+                    <Image Source="../Resource/Images/IconFolder.png" Width="20" Height="20" Margin="25,0,0,0"/>
                 </StackPanel>
             </Grid>
         </StackPanel>
+        <StackPanel Grid.Column="0" Grid.Row="1" Background="White">
+            <ComboBox
+                Style="{StaticResource ComboBoxWithTitleStyle}"
+                Name="CmbBxProd">
+                <ComboBoxItem Content="Бакалея" IsEnabled="False"/>
+                <ComboBoxItem Content="Макароны"/>
+                <ComboBoxItem Content="Спагетти"/>
+            </ComboBox>
+        </StackPanel>
         <StackPanel Grid.Column="1">
-            <Frame/>
         </StackPanel>
     </Grid>
 </Page>

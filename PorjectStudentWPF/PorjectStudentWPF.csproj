@@ -14,6 +14,8 @@
     <None Remove="Resource\Fonts\RobotoCondensed-Light.ttf" />
     <None Remove="Resource\Fonts\RobotoCondensed-LightItalic.ttf" />
     <None Remove="Resource\Fonts\RobotoCondensed-Regular.ttf" />
+    <None Remove="Resource\Images\IconDash.png" />
+    <None Remove="Resource\Images\IconExit.png" />
     <None Remove="Resource\Images\IconFolder.png" />
     <None Remove="Resource\Images\IconLogo.png" />
     <None Remove="Resource\Images\IconPlus.png" />
@@ -52,6 +54,12 @@
     <Content Include="Resource\Fonts\RobotoCondensed-Regular.ttf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Resource Include="Resource\Images\IconDash.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resource\Images\IconExit.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Resource\Images\IconFolder.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>

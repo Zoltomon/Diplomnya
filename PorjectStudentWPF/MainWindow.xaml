@@ -6,10 +6,27 @@
         xmlns:local="clr-namespace:PorjectStudentWPF"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        WindowStyle="SingleBorderWindow"
-        Title="YDoma" Height="450" Width="800">
+        WindowStyle="None"
+        
+        MouseDown="Window_MouseDown"
+        Title="YDoma" Height="550" Width="800">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="5*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Background="#0272BA">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <Button Width="20" Margin="0,0,2,0" Background="Transparent" Name="BtnDashWndw" Click="BtnDashWndw_Click" BorderThickness="0" Height="20" HorizontalAlignment="Right" VerticalAlignment="Center">
+                    <Image Source="/Resource/Images/IconDash.png"/>
+                </Button>
+                <Button Width="20" Margin="0,0,2,0" Background="Transparent" Name="BtnExtWndw" Click="BtnExtWndw_Click" BorderThickness="0" Height="20" HorizontalAlignment="Right" VerticalAlignment="Center">
+                    <Image Source="/Resource/Images/IconExit.png"/>
+                </Button>
+            </StackPanel>
+        </StackPanel>
         <Frame
+            Grid.Row="1"
             NavigationUIVisibility="Hidden"
             Name="FrmMainWindow"/>
     </Grid>

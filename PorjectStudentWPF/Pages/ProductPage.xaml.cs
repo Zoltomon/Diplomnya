@@ -23,6 +23,16 @@ namespace PorjectStudentWPF.Pages
         public ProductPage()
         {
             InitializeComponent();
+            CmbBxProd.SelectionChanged += CmbBxProd_SelectionChanged;
+        }
+        private void CmbBxProd_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        {
+            // Проверяем, выбран ли "тайтл" (первый элемент)
+            if (CmbBxProd.SelectedIndex == 0)
+            {
+                // Делаем что-то, например, очищаем выбор
+                CmbBxProd.SelectedIndex = -1;
+            }
         }
     }
 }

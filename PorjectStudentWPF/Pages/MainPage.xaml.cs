@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PorjectStudentWPF.Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,7 @@ namespace PorjectStudentWPF.Pages
         public MainPage()
         {
             InitializeComponent();
+            NavigateClass.navigate = FrmMainPage;
         }
 
         private void BtnMain_Click(object sender, RoutedEventArgs e)
@@ -42,7 +44,14 @@ namespace PorjectStudentWPF.Pages
 
         private void BtnProduct_Click(object sender, RoutedEventArgs e)
         {
-
+            try
+            {
+                NavigateClass.navigate.Navigate(new ProductPage());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
