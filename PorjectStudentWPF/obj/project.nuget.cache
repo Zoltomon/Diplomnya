@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "kAgPT44683RFB/744db36YHHdBqTOkXcAcKgNII3eCjDeM3sgOYV0HeP0//0qmPvRI0mz+HyHovpUQ2a+mfKXQ==",
+  "dgSpecHash": "pcUdzr9wH6kmUMtScOEDElLnGRccZ5Ys/b/zTWPdsDKYAKhr8pYLZdFg+8mPPVGubK0klwcWvZ4QtHssHt+3HQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\dorzh\\source\\repos\\MyApp\\PorjectStudentWPF\\PorjectStudentWPF.csproj",
   "expectedPackageFiles": [
@@ -23,6 +23,7 @@
     "C:\\Users\\dorzh\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512",
     "C:\\Users\\dorzh\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
     "C:\\Users\\dorzh\\.nuget\\packages\\mysqlconnector\\2.2.5\\mysqlconnector.2.2.5.nupkg.sha512",
+    "C:\\Users\\dorzh\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\dorzh\\.nuget\\packages\\pomelo.entityframeworkcore.mysql\\7.0.0\\pomelo.entityframeworkcore.mysql.7.0.0.nupkg.sha512",
     "C:\\Users\\dorzh\\.nuget\\packages\\system.codedom\\4.4.0\\system.codedom.4.4.0.nupkg.sha512",
     "C:\\Users\\dorzh\\.nuget\\packages\\system.text.encodings.web\\7.0.0\\system.text.encodings.web.7.0.0.nupkg.sha512",

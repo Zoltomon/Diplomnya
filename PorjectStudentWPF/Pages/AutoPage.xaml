@@ -29,9 +29,9 @@
                 <Border Grid.Row="2" CornerRadius="0,0,5,5" BorderBrush="#F5F5F5" BorderThickness="2">
                     <StackPanel Grid.Row="2" SnapsToDevicePixels="True" Orientation="Vertical" Background="#F5F5F5">
                         <TextBlock Text="Введите логин:" Margin="25,2,25,0" FontSize="16" FontFamily="Roboto Condensed"/>
-                        <TextBox BorderThickness="0" Height="30" FontSize="16" Margin="25,0,25,0" Style="{StaticResource RoundedTextBox}"/>
+                        <TextBox Name="TxbLog" BorderThickness="0" Height="30" FontSize="16" Margin="25,0,25,0" Style="{StaticResource RoundedTextBox}"/>
                         <TextBlock Text="Введите пароль:" Margin="25,0,25,0" FontSize="16" FontFamily="Roboto Condensed"/>
-                        <TextBox BorderThickness="0" Height="30" FontSize="16" Margin="25,0,25,0" Style="{StaticResource RoundedTextBox}"/>
+                        <PasswordBox Name="TxbPass" BorderThickness="0" Height="30" FontSize="16" Margin="25,0,25,0" Style="{StaticResource RoundedPassBox}"/>
                         <Button Content="Войти" Background="#0281C8" Name="BtnAuto" Click="BtnAuto_Click" Height="40" Margin="25,15,25,0" Style="{StaticResource RndBtnStl}" FontSize="20" FontFamily="Roboto Condensed"/>
                         <Button Content="Регистрация" Height="40" Margin="25,15,25,15" Style="{StaticResource RndBtnStl}" FontSize="20" FontFamily="Roboto Condensed" Name="BtnReg" Click="BtnReg_Click"/>
                     </StackPanel>
