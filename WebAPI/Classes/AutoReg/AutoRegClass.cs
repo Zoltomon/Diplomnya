@@ -19,8 +19,8 @@ namespace WebAPI.Classes.AutoReg
                         {
                             UserLogin = x.Login,
                             UserPassword = x.Password,
-                            UserRoleId = x.Role.Id,
-                            UserStatusId = x.Status.Id,
+                            UserRole = x.Role.Name,
+                            UserStatus = x.Status.Name,
                             UserEmail = x.Email,
                             UserTelephone = x.Telephone,
                         }
@@ -29,13 +29,10 @@ namespace WebAPI.Classes.AutoReg
             if (data != null)
             {
                 return data;
-
             }
             else
             {
-                return new List<UserProfileDTO>()
-                {
-                };
+                return new List<UserProfileDTO>() { };
             }
         }
     }

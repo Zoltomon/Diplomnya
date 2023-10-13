@@ -14,8 +14,8 @@ namespace WebAPI.Classes.DTO
 
         public string? UserTelephone { get; set; }
 
-        public int? UserStatusId { get; set; }
+        public string? UserStatus { get; set; }
 
-        public int? UserRoleId { get; set; }
+        public string? UserRole { get; set; }
     }
 }

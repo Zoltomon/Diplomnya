@@ -53,9 +53,25 @@ namespace PorjectStudentWPF.Pages
                     {
                         if (response.StatusCode == System.Net.HttpStatusCode.OK)
                         {
-                            NavigateClass.navigate.Navigate(new MainPage());
-                            MessageBox.Show("Все хорошо");
+                            var userResponseList = JsonConvert.DeserializeObject<List<UserClass>>(responseContent);
+                            if (userResponseList.Count > 0)
+                            {
+                                var userStatus = userResponseList[0].UserStatus;
+                                if (userStatus == "Аккаунт активен")
+                                {
+                                    MessageBox.Show("Активен");
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Неактивен");
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show("Пользователь не найден");
+                            }
                         }
+                        
                     }
                 }
 
