@@ -57,13 +57,14 @@ namespace PorjectStudentWPF.Pages
                             if (userResponseList.Count > 0)
                             {
                                 var userStatus = userResponseList[0].UserStatus;
-                                if (userStatus == "Аккаунт активен")
+                                switch(userStatus)
                                 {
-                                    MessageBox.Show("Активен");
-                                }
-                                else
-                                {
-                                    MessageBox.Show("Неактивен");
+                                    case "Аккаунт активен":
+                                        NavigateClass.navigate.Navigate(new MainPage());
+                                        break;
+                                    case "Аккаунт неактивен":
+                                        MessageBox.Show("Ваш аккаунт заблокирован\nОбратитесь к администратору вашей системы");
+                                        break;
                                 }
                             }
                             else

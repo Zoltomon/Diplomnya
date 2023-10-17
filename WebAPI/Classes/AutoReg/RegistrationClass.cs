@@ -1,18 +1,17 @@
 ﻿using WebAPI.Classes.DTO;
-using WebAPI.Classes.HelperClass;
 using WebAPI.Interface;
 using WebAPI.Models;
 
 namespace WebAPI.Classes.AutoReg
 {
-    public class AutoRegClass:IUserProfile
+    public class RegistrationClass:IUserProfilePOST
     {
         private readonly ZdorzhyievSwebContext _context;
-        public AutoRegClass(ZdorzhyievSwebContext context)
+        public RegistrationClass(ZdorzhyievSwebContext context)
         {
             _context = context;
         }
-        public List<UserProfileDTO> FirstOfDefault(string Login, string Password)
+        public List<UserProfileDTO> FirstOfDefault(string Login, string Password, string Email, string Telephone)
         {
             List<UserProfileDTO> data = _context.UserProfiles.Select(
                         x => new UserProfileDTO

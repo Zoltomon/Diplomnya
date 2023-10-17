@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "pcUdzr9wH6kmUMtScOEDElLnGRccZ5Ys/b/zTWPdsDKYAKhr8pYLZdFg+8mPPVGubK0klwcWvZ4QtHssHt+3HQ==",
+  "dgSpecHash": "Rq5uRsZ6sfppSoJEXdAX77dvOqxNHjcmAwqHVT4HNOD3vrDsut5CCIH20QRmWxEKewR107bO0J3UiKO5hsHqTw==",
   "success": true,
   "projectFilePath": "C:\\Users\\dorzh\\source\\repos\\MyApp\\PorjectStudentWPF\\PorjectStudentWPF.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\dorzh\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\dorzh\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\dorzh\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.11\\microsoft.entityframeworkcore.7.0.11.nupkg.sha512",
     "C:\\Users\\dorzh\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.11\\microsoft.entityframeworkcore.abstractions.7.0.11.nupkg.sha512",
