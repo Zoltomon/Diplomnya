@@ -1,5 +1,4 @@
 ﻿using PorjectStudentWPF.Classes;
-using PorjectStudentWPF.Pages;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,41 +11,37 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace PorjectStudentWPF
+namespace PorjectStudentWPF.Pages
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Логика взаимодействия для PageWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class PageWindow : Window
     {
-        public MainWindow()
+        public PageWindow()
         {
             InitializeComponent();
+            NavigateClass.navigate = FrmMainWindow;
+            FrmMainWindow.Navigate(new MainPage());
         }
 
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            if(e.LeftButton == MouseButtonState.Pressed)
+            if(e.RightButton == MouseButtonState.Pressed)
             {
                 DragMove();
             }
         }
 
-        private void BtnExtWndw_Click(object sender, RoutedEventArgs e)
-        {
-            this.Close();
-        }
-
         private void BtnDashWndw_Click(object sender, RoutedEventArgs e)
         {
-            if(this.WindowState == WindowState.Maximized) 
+            if (this.WindowState == WindowState.Maximized)
             {
                 this.WindowState = WindowState.Normal;
             }
-            if(this.WindowState == WindowState.Normal)
+            if (this.WindowState == WindowState.Normal)
             {
                 this.WindowState = WindowState.Minimized;
             }
@@ -68,21 +63,9 @@ namespace PorjectStudentWPF
             }
         }
 
-        private void BtnAuto_Click(object sender, RoutedEventArgs e)
+        private void BtnExtWndw_Click(object sender, RoutedEventArgs e)
         {
-            try
-            {
-                NavigateClass.navigate.Navigate(new PageWindow());
-            }
-            catch(Exception ex) 
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-
-        private void BtnReg_Click(object sender, RoutedEventArgs e)
-        {
-
+            this.Close();
         }
     }
 }

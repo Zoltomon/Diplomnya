@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET7_0;NETCOREAPP
 C:\Users\dorzh\source\repos\MyApp\PorjectStudentWPF\App.xaml
-51831926253
+62099278668
 6-1913304756
-9-1043062964
+10-866855902
 214-1572046954
-MainWindow.xaml;Pages\AutoPage.xaml;Pages\MainPage.xaml;Pages\ProductPage.xaml;Pages\RegPage.xaml;
+MainWindow.xaml;Pages\AutoPage.xaml;Pages\MainPage.xaml;Pages\PageWindow.xaml;Pages\ProductPage.xaml;Pages\RegPage.xaml;
 
 False
 

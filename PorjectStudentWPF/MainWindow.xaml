@@ -10,30 +10,53 @@
         AllowsTransparency="True"
         MouseDown="Window_MouseDown"
         Title="YDoma" Height="550"
-        MaxHeight="800"
-        MaxWidth="1200"
-        Width="800">
-    <Grid>
+        Width="400">
+    <Grid Background="#0272BA">
         <Grid.RowDefinitions>
             <RowDefinition Height="20"/>
-            <RowDefinition Height="5*"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <StackPanel Grid.Row="0" Background="#0272BA" Margin="0" Height="Auto">
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                <Button Width="20" Margin="0,0,2,0" Background="Transparent" Name="BtnDashWndw" Click="BtnDashWndw_Click" BorderThickness="0" Height="20" HorizontalAlignment="Right" VerticalAlignment="Center">
-                    <Image Source="/Resource/Images/IconDash.png"/>
-                </Button>
-                <Button Width="20" Margin="0,0,2,0" Background="Transparent" Name="BtnMaxWndw" Click="BtnMaxWndw_Click" Height="20" BorderThickness="0" VerticalAlignment="Center" HorizontalAlignment="Right">
-                    <Image Source="/Resource/Images/IconMaxWndw.png"/>
-                </Button>
-                <Button Width="20" Margin="0,0,2,0" Background="Transparent" Name="BtnExtWndw" Click="BtnExtWndw_Click" BorderThickness="0" Height="20" HorizontalAlignment="Right" VerticalAlignment="Center">
-                    <Image Source="/Resource/Images/IconExit.png"/>
-                </Button>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                    <Button Width="20" Margin="0,0,2,0" Background="Transparent" Name="BtnDashWndw" Click="BtnDashWndw_Click" BorderThickness="0" Height="20" HorizontalAlignment="Right" VerticalAlignment="Center">
+                        <Image Source="/Resource/Images/IconDash.png"/>
+                    </Button>
+                    <Button Width="20" Margin="0,0,2,0" Background="Transparent" Name="BtnMaxWndw" Click="BtnMaxWndw_Click" Height="20" BorderThickness="0" VerticalAlignment="Center" HorizontalAlignment="Right">
+                        <Image Source="/Resource/Images/IconMaxWndw.png"/>
+                    </Button>
+                    <Button Width="20" Margin="0,0,2,0" Background="Transparent" Name="BtnExtWndw" Click="BtnExtWndw_Click" BorderThickness="0" Height="20" HorizontalAlignment="Right" VerticalAlignment="Center">
+                        <Image Source="/Resource/Images/IconExit.png"/>
+                    </Button>
+                </StackPanel>
             </StackPanel>
-        </StackPanel>
-        <Frame
-            Grid.Row="1"
-            NavigationUIVisibility="Hidden"
-            Name="FrmMainWindow"/>
+        <DockPanel Grid.Row="1" HorizontalAlignment="Center" Width="350" VerticalAlignment="Center">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="90"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="240"/>
+                </Grid.RowDefinitions>
+                <StackPanel Grid.Row="0" Orientation="Vertical">
+                    <Image Source="/Resource/Images/IconLogo.png" Width="60" Height="60"/>
+                    <TextBlock Text="Рабочее место кассира" FontSize="16" HorizontalAlignment="Center" FontFamily="Roboto Condensed" Foreground="#B0B0B0"/>
+                </StackPanel>
+                <Border Grid.Row="1" CornerRadius="5,5,0,0" BorderBrush="#0281C8" BorderThickness="2">
+                    <StackPanel Grid.Row="1" SnapsToDevicePixels="True" Orientation="Horizontal" Background="#0281C8">
+                        <Image Source="/Resource/Images/IconUserAuto.png" Width="30" Height="30" Margin="25,0,0,0"/>
+                        <TextBlock Text="Авторизация" VerticalAlignment="Center" FontWeight="SemiBold" Margin="3,0,0,0" FontFamily="Roboto Condensed" FontSize="20"/>
+                    </StackPanel>
+                </Border>
+                <Border Grid.Row="2" CornerRadius="0,0,5,5" BorderBrush="#F5F5F5" BorderThickness="2">
+                    <StackPanel Grid.Row="2" SnapsToDevicePixels="True" Orientation="Vertical" Background="#F5F5F5">
+                        <TextBlock Text="Введите логин:" Margin="25,2,25,0" FontSize="16" FontFamily="Roboto Condensed"/>
+                        <TextBox Name="TxbLog" BorderThickness="0" Height="30" FontSize="16" Margin="25,0,25,0" Style="{StaticResource RoundedTextBox}"/>
+                        <TextBlock Text="Введите пароль:" Margin="25,0,25,0" FontSize="16" FontFamily="Roboto Condensed"/>
+                        <PasswordBox Name="TxbPass" BorderThickness="0" Height="30" FontSize="16" Margin="25,0,25,0" Style="{StaticResource RoundedPassBox}"/>
+                        <Button Foreground="AntiqueWhite" Content="Войти" Background="#0281C8" Name="BtnAuto" Click="BtnAuto_Click" Height="40" Margin="25,15,25,0" Style="{StaticResource RndBtnStl}" FontSize="20" FontFamily="Roboto Condensed"/>
+                        <Button Content="Регистрация" Height="40" Margin="25,15,25,15" Style="{StaticResource RndBtnStl}" FontSize="20" FontFamily="Roboto Condensed" Name="BtnReg" Click="BtnReg_Click"/>
+                    </StackPanel>
+                </Border>
+            </Grid>
+        </DockPanel>
     </Grid>
 </Window>

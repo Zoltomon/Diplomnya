@@ -8,7 +8,6 @@ namespace PorjectStudentWPF.Classes
 {
     internal class UserClass
     {
-        public int UserId { get; set; }
 
         public string? UserLogin { get; set; }
 

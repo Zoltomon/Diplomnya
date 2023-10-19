@@ -46,7 +46,6 @@ namespace PorjectStudentWPF.Pages
                 {
                     string url = $"https://localhost:7089/api/User?UserLogin={TxbLog.Text}&UserPassword={TxbPass.Password}";
                     HttpClient client = new HttpClient();
-                    bool varif = BCrypt.Net.BCrypt.Verify(TxbPass.Password, url);
                     var response = await client.GetAsync(url);
                     var responseContent = await response.Content.ReadAsStringAsync();
                     if (response.StatusCode == System.Net.HttpStatusCode.OK)
