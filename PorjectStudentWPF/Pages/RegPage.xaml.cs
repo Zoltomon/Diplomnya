@@ -28,7 +28,25 @@ namespace PorjectStudentWPF.Pages
 
         private void BtnReg_Click(object sender, RoutedEventArgs e)
         {
-
+            try
+            {
+                if (TxbEmail.Text == null || TxbLogin.Text == null || TxbPass.Text == null)
+                {
+                    MessageBox.Show("Введите данные");
+                }
+                if (TxbPass != TxbCopyPass)
+                {
+                    MessageBox.Show("Неверно повторен пароль");
+                }
+                else
+                {
+                    MessageBox.Show("Все хорошо");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void BtnBack_Click(object sender, RoutedEventArgs e)

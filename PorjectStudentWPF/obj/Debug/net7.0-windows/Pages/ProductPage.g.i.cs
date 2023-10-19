@@ -69,7 +69,7 @@ namespace PorjectStudentWPF.Pages {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/PorjectStudentWPF;V1.0.0.0;component/pages/productpage.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/PorjectStudentWPF;component/pages/productpage.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Pages\ProductPage.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

@@ -41,3 +41,4 @@ C:\Users\dorzh\source\repos\MyApp\WebAPI\obj\Debug\net7.0\refint\WebAPI.dll
 C:\Users\dorzh\source\repos\MyApp\WebAPI\obj\Debug\net7.0\WebAPI.pdb
 C:\Users\dorzh\source\repos\MyApp\WebAPI\obj\Debug\net7.0\WebAPI.genruntimeconfig.cache
 C:\Users\dorzh\source\repos\MyApp\WebAPI\obj\Debug\net7.0\ref\WebAPI.dll
+C:\Users\dorzh\source\repos\MyApp\WebAPI\bin\Debug\net7.0\BCrypt.Net-Next.dll

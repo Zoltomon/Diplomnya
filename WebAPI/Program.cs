@@ -10,6 +10,7 @@ builder.Services.AddDbContext<ZdorzhyievSwebContext>(options =>
     options.UseMySql(builder.Configuration.GetConnectionString("dataConnect"),
                     new MySqlServerVersion(new Version(8, 0, 26))));
 builder.Services.AddTransient<IUserProfile, AutorizationClass>();
+builder.Services.AddTransient<IUserProfilePOST, RegistrationClass>();
 // Add services to the container.
 
 builder.Services.AddControllers();

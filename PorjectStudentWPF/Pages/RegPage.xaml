@@ -29,13 +29,13 @@
                 <Border Grid.Row="2" CornerRadius="0,0,5,5" BorderBrush="#F5F5F5" BorderThickness="2">
                     <StackPanel Grid.Row="2" SnapsToDevicePixels="True" Orientation="Vertical" Background="#F5F5F5">
                         <TextBlock Text="Введите email:" Margin="25,2,25,0" FontSize="16" FontFamily="Roboto Condensed"/>
-                        <TextBox BorderThickness="0" Height="30" FontSize="16" Margin="25,0,25,0" Style="{StaticResource RoundedTextBox}"/>
+                        <TextBox Name="TxbEmail" BorderThickness="0" Height="30" FontSize="16" Margin="25,0,25,0" Style="{StaticResource RoundedTextBox}"/>
                         <TextBlock Text="Введите логин:" Margin="25,2,25,0" FontSize="16" FontFamily="Roboto Condensed"/>
-                        <TextBox BorderThickness="0" Height="30" FontSize="16" Margin="25,0,25,0" Style="{StaticResource RoundedTextBox}"/>
+                        <TextBox Name="TxbLogin" BorderThickness="0" Height="30" FontSize="16" Margin="25,0,25,0" Style="{StaticResource RoundedTextBox}"/>
                         <TextBlock Text="Введите пароль:" Margin="25,0,25,0" FontSize="16" FontFamily="Roboto Condensed"/>
-                        <TextBox BorderThickness="0" Height="30" FontSize="16" Margin="25,0,25,0" Style="{StaticResource RoundedTextBox}"/>
+                        <TextBox Name="TxbPass" BorderThickness="0" Height="30" FontSize="16" Margin="25,0,25,0" Style="{StaticResource RoundedTextBox}"/>
                         <TextBlock Text="Повторите пароль:" Margin="25,2,25,0" FontSize="16" FontFamily="Roboto Condensed"/>
-                        <TextBox BorderThickness="0" Height="30" FontSize="16" Margin="25,0,25,0" Style="{StaticResource RoundedTextBox}"/>
+                        <TextBox Name="TxbCopyPass" BorderThickness="0" Height="30" FontSize="16" Margin="25,0,25,0" Style="{StaticResource RoundedTextBox}"/>
                         <Button Content="Регистрация" Background="#0281C8" Name="BtnReg" Click="BtnReg_Click" Height="40" Margin="25,15,25,0" Style="{StaticResource RndBtnStl}" FontSize="20" FontFamily="Roboto Condensed"/>
                         <Button Content="Назад" Height="40" Margin="25,15,25,15" Style="{StaticResource RndBtnStl}" Name="BtnBack" Click="BtnBack_Click" FontSize="20" FontFamily="Roboto Condensed"/>
                     </StackPanel>

@@ -11,28 +11,40 @@ namespace WebAPI.Classes.AutoReg
         {
             _context = context;
         }
-        public List<UserProfileDTO> FirstOfDefault(string Login, string Password, string Email, string Telephone)
+        public bool CreateNote(UserProfileDTO userDTO)
         {
-            List<UserProfileDTO> data = _context.UserProfiles.Select(
-                        x => new UserProfileDTO
-                        {
-                            UserLogin = x.Login,
-                            UserPassword = x.Password,
-                            UserRole = x.Role.Name,
-                            UserStatus = x.Status.Name,
-                            UserEmail = x.Email,
-                            UserTelephone = x.Telephone,
-                        }
-                ).Where(u => u.UserLogin == Login && u.UserPassword == Password).ToList();
+            try
+            {
+                string hashPass = BCrypt.Net.BCrypt.HashPassword(userDTO.UserPassword);
+                if (hashPass != null)
+                {
+                    var createUser = new Models.UserProfile
+                    {
+                        Login = userDTO.UserLogin,
+                        Password = hashPass,
+                        Email = userDTO.UserEmail,
+                        Telephone = userDTO.UserTelephone,
+                        RoleId = 1,
+                        StatusId = 1
+                    };
 
-            if (data != null)
-            {
-                return data;
+                    _context.UserProfiles.Add(createUser);
+                    _context.SaveChanges();
+
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+
             }
-            else
+            catch (Exception ex)
             {
-                return new List<UserProfileDTO>() { };
+                Results.BadRequest(ex);
+                throw;
             }
         }
+
     }
 }

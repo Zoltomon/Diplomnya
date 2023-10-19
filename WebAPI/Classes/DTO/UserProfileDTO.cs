@@ -4,8 +4,6 @@ namespace WebAPI.Classes.DTO
 {
     public class UserProfileDTO
     {
-        public int UserId { get; set; }
-
         public string? UserLogin { get; set; }
 
         public string? UserPassword { get; set; }

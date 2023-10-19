@@ -1,4 +1,5 @@
-﻿using WebAPI.Classes.DTO;
+﻿using BCrypt.Net;
+using WebAPI.Classes.DTO;
 using WebAPI.Classes.HelperClass;
 using WebAPI.Interface;
 using WebAPI.Models;

@@ -1,4 +1,5 @@
 ﻿
+using BCrypt.Net;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Newtonsoft.Json;
@@ -45,34 +46,29 @@ namespace PorjectStudentWPF.Pages
                 {
                     string url = $"https://localhost:7089/api/User?UserLogin={TxbLog.Text}&UserPassword={TxbPass.Password}";
                     HttpClient client = new HttpClient();
-
+                    bool varif = BCrypt.Net.BCrypt.Verify(TxbPass.Password, url);
                     var response = await client.GetAsync(url);
                     var responseContent = await response.Content.ReadAsStringAsync();
-
-                    if (!string.IsNullOrEmpty(TxbLog.Text) && !string.IsNullOrEmpty(TxbPass.Password))
+                    if (response.StatusCode == System.Net.HttpStatusCode.OK)
                     {
-                        if (response.StatusCode == System.Net.HttpStatusCode.OK)
+                        var userResponseList = JsonConvert.DeserializeObject<List<UserClass>>(responseContent);
+                        if (userResponseList.Count > 0)
                         {
-                            var userResponseList = JsonConvert.DeserializeObject<List<UserClass>>(responseContent);
-                            if (userResponseList.Count > 0)
+                            var userStatus = userResponseList[0].UserStatus;
+                            switch(userStatus)
                             {
-                                var userStatus = userResponseList[0].UserStatus;
-                                switch(userStatus)
-                                {
-                                    case "Аккаунт активен":
-                                        NavigateClass.navigate.Navigate(new MainPage());
-                                        break;
-                                    case "Аккаунт неактивен":
-                                        MessageBox.Show("Ваш аккаунт заблокирован\nОбратитесь к администратору вашей системы");
-                                        break;
-                                }
-                            }
-                            else
-                            {
-                                MessageBox.Show("Пользователь не найден");
+                                case "Аккаунт активен":
+                                    NavigateClass.navigate.Navigate(new MainPage());
+                                    break;
+                                case "Аккаунт неактивен":
+                                    MessageBox.Show("Ваш аккаунт заблокирован\nОбратитесь к администратору вашей системы");
+                                    break;
                             }
                         }
-                        
+                        else
+                        {
+                            MessageBox.Show("Пользователь не найден");
+                        }
                     }
                 }
 

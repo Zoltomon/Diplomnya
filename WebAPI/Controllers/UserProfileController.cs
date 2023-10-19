@@ -11,16 +11,11 @@ namespace WebAPI.Controllers
     {
 
         private readonly IUserProfile _users;
-        private readonly IUserProfilePOST _usersPost;
-        public UserController(IUserProfile users, IUserProfilePOST usersPost)
+        public UserController(IUserProfile users)
         {
             _users = users;
-            _usersPost = usersPost;
         }
         [HttpGet]
         public async Task<ActionResult<List<UserProfileDTO>>> Get(string UserLogin, string UserPassword) => await Task.FromResult(_users.FirstOfDefault(UserLogin, UserPassword));
-
-        public async Task<ActionResult<List<UserProfileDTO>>> Get(string UserLogin, string UserPassword, string UserTelephone, string UserEmail) =>
-            await Task.FromResult(_usersPost.FirstOfDefault(UserLogin, UserPassword, UserTelephone, UserEmail));
     }
 }
